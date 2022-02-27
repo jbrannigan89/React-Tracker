@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/React-Tracker/static/css/main.dc3707c8.css",
+    "main.js": "/React-Tracker/static/js/main.ffc5fc83.js",
+    "static/js/787.635aedaa.chunk.js": "/React-Tracker/static/js/787.635aedaa.chunk.js",
+    "index.html": "/React-Tracker/index.html",
+    "main.dc3707c8.css.map": "/React-Tracker/static/css/main.dc3707c8.css.map",
+    "main.ffc5fc83.js.map": "/React-Tracker/static/js/main.ffc5fc83.js.map",
+    "787.635aedaa.chunk.js.map": "/React-Tracker/static/js/787.635aedaa.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dc3707c8.css",
+    "static/js/main.ffc5fc83.js"
+  ]
+}
