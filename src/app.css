@@ -9,7 +9,7 @@
 .task {
   background: rgba(228, 224, 224, 0.644);
   padding: 0.5em 1em;
-  width: 75%;
+  width: min(75%, 500px);
   border-radius: 0.4em;
 }
 .t-container {
@@ -22,7 +22,7 @@
 .xbutton {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   font-size: 1.5em;
 }
 .add-form input[type="text"] {
