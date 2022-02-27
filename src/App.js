@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Header from "./components/header";
+import Tasks from "./components/tasks";
+import AddTask from "./components/AddTask";
 
-function App() {
+const App = () => {
+  let name = "Joe B";
+  const [list, setList] = useState([]);
+  //addForm
+  const [showAddTask, setshowAddTask] = useState(false);
+
+  //delete task
+  const deleteTask = (id) => {
+    setList(list.filter((task) => task.id !== id));
+  };
+  //add task
+  const addTask = (task) => {
+    const id = Math.floor(Math.random() * 10000) + 1;
+    const newTask = { id, ...task };
+    console.log(newTask);
+    setList([...list, newTask]);
+    console.log(list);
+  };
+  //showAdd
+  const showAdd = () => {
+    setshowAddTask(!showAddTask);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Header showAdd={showAdd} />
+      {showAddTask == true ? (
+        <AddTask add={addTask} showAdd={showAdd} />
+      ) : (
+        !(<AddTask add={addTask} showAdd={showAdd} />)
+      )}
+      <Tasks tasks={list} practice="123" onDelete={deleteTask} />
     </div>
   );
-}
+};
 
 export default App;
